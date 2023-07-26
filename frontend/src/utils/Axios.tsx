@@ -1,25 +1,12 @@
 import axios from 'axios';
 import { getBearerToken } from './Session';
-import { type } from 'os';
-
-type Massage = {
-    subject: string;
-    body: {
-        contentType: string;
-        content: string;
-    };
-    toRecipients: [
-        {
-            emailAddress: {
-                address: string;
-            };
-        }
-    ];
-};
+import { Massage } from './Types';
 
 
-const baseUrl = 'https://graph.microsoft.com/v1.0';
-const getConfig = async () => {
+const graphURL = 'https://graph.microsoft.com/v1.0';
+const apiUrl = 'http://localhost:8000';
+
+const getConfigForGraph = async () => {
     const token = await getBearerToken();
     return {
         headers: {
@@ -30,21 +17,23 @@ const getConfig = async () => {
 }
 
 export const getMe = async () => {
-    const config = await getConfig();
-    return axios.get(`${baseUrl}/me`, config);
+    const config = await getConfigForGraph();
+    return axios.get(`${graphURL}/me`, config);
 }
 
 export const getInbox = async (top = 20) => {
-    const config = await getConfig();
-    return axios.get(`${baseUrl}/me/mailFolders/inbox/messages?$top=${top}`, config);
+    const config = await getConfigForGraph();
+    return axios.get(`${graphURL}/me/mailFolders/inbox/messages?$top=${top}`, config);
 }
 
 export const sendMail = async (message : Massage) => {
-    const config = await getConfig();
-    return axios.post(`${baseUrl}/me/sendMail`, message, config);
+    const config = await getConfigForGraph();
+    return axios.post(`${graphURL}/me/sendMail`, message, config);
 }
 
-//yeni metotlar api için burada yazılacak
 
-
+export const sendPrompt = async (prompt: string) => {
+    const token = await getBearerToken();
+    return axios.post(`${apiUrl}/prompt`, { prompt, token });
+}
 

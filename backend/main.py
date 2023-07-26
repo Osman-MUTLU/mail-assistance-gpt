@@ -1,31 +1,24 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import requests
+from fastapi.middleware.cors import CORSMiddleware
 
 class Promt(BaseModel):
-    text: str
+    prompt: str
     token: str
 
 app = FastAPI()
 
-@app.get("/")
-async def root():
-    #chat gpt ye promt gönder
+origins = ["*"]
 
-    mails = []
-    soru = "soru"
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
-
-    answer = "cevap"
-    return {
-        "answer": answer,
-        "question": soru,
-        "mails": mails,
-        "token": "token"
-        }
-
-
-@app.get("/promt")
+@app.post("/prompt")
 async def root(promt: Promt):
     token = promt.token
     # token kullanarak microsoft graph api ile mailleri çek
