@@ -1,0 +1,41 @@
+.chat{
+    background-color: #fff;
+    width: calc(100vw - 300px);
+    height: 100vh;
+}
+.chat-header{
+    padding: 5px;
+    text-align: center;
+    background: #f4f4f4;
+}
+.chat-body{
+    height: calc(100vh - 200px);
+    overflow-y: scroll;
+}
+.chat-body-item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top:10px;
+    gap: 10px;
+}
+.chat-body-item-question{
+    min-height: 50px;
+    padding: 20px 100px;
+    
+}
+.chat-body-item-answer{
+    min-height: 50px;
+    padding: 20px 100px;
+    background-color: #f4f4f4;
+}
+.chat-footer{
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+
+    width: calc(100vw - 300px);
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
