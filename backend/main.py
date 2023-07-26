@@ -8,6 +8,22 @@ class Promt(BaseModel):
 
 app = FastAPI()
 
+@app.get("/")
+async def root():
+    #chat gpt ye promt gönder
+
+    mails = []
+    soru = "soru"
+
+
+    answer = "cevap"
+    return {
+        "answer": answer,
+        "question": soru,
+        "mails": mails,
+        "token": "token"
+        }
+
 
 @app.get("/promt")
 async def root(promt: Promt):
