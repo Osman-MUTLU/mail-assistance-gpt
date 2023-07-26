@@ -23,13 +23,14 @@
 /frontend/yarn-error.log*
 
 # for fastapi
-/backend/.env
-/backend/.env.*
-/backend/.vscode
-/backend/.pytest_cache
-/backend/.mypy_cache
-/backend/.coverage
-/backend/.coverage.*
+/backend/env
+/backend/env.*
+/backend/vscode
+/backend/__pycache__
+/backend/pytest_cache
+/backend/mypy_cache
+/backend/coverage
+/backend/coverage.*
 /backend/coverage.xml
 /backend/htmlcov
 /backend/htmlcov.*
