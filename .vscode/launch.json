@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: FastAPI",
+            "name": "Backend: FastAPI",
             "type": "python",
             "request": "launch",
             "module": "uvicorn",
@@ -20,7 +20,7 @@
         },
         {
             "command": "cd frontend | npm start",
-            "name": "Run npm start",
+            "name": "Frontend: React",
             "request": "launch",
             "type": "node-terminal"
         },
