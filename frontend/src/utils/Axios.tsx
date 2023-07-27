@@ -4,6 +4,7 @@ import { Massage } from './Types';
 
 
 const graphURL = 'https://graph.microsoft.com/v1.0';
+
 const apiUrl = 'http://localhost:8000';
 
 const getConfigForGraph = async () => {
