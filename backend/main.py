@@ -31,6 +31,10 @@ async def root(promt: Promt):
         })
     mails = mails.json()
     mails = mails["value"]
-    # mailleri tek tek dolaşarak içeriklerini çek
+
+    # gpt içerisine promt olarak mailleri ve promtu göndermelisin
+
+
+
     return mails
 
