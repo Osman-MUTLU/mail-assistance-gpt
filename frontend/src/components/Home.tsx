@@ -1,13 +1,14 @@
 import React from 'react'
 import {getMe } from '../utils/Axios';
 import { User } from '../utils/Types';
-
-
+import '../styles/Home.css'
+import { useIsSignedIn } from '../utils/Session';
 
 
 
 function Home() {
     const [user, setUser] = React.useState<User>({});
+    const [isSignedIn] = useIsSignedIn();
 
     React.useEffect(() => {
         getMe().then((response) => {
@@ -23,9 +24,28 @@ function Home() {
 
     return (
         <div className='home'>
-            <h1>Merhaba {user?.displayName}</h1>
+            {
+                isSignedIn ? (
+                    <div className='home-content'>
+                        <div className='home-header'>
+                            <h1>Welcome, {user.displayName}</h1>
+                        </div>
+                        <div className='home-body'>
+                            <h2>Here are your emails</h2>
+                        </div>
+                    </div>
+                ) : (
+                    <div className='home-content'>
+                        <div className='home-header'>
+                            <h1>Welcome to the Outlook Clone</h1>
+                        </div>
+                        <div className='home-body'>
+                            <h2>Please sign in to view your emails</h2>
+                        </div>
+                    </div>
+                )
+            }
         </div>
-
     )
 
 }

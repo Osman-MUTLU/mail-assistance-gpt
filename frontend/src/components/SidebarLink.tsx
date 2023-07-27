@@ -1,5 +1,8 @@
 import { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { getGlobalProvider, useIsSignedIn } from '../utils/Session'
+
+
 
 interface SidebarLinkProps {
     label:string
@@ -9,8 +12,13 @@ interface SidebarLinkProps {
 
 const SidebarLink: FC<SidebarLinkProps> = ({label,icon,href}) => {
     const navigator = useNavigate();
-    const handleClick = () => {
-        navigator(href)
+    const [isSignedIn] = useIsSignedIn();
+    const handleClick = async () => {
+        if(!isSignedIn){
+            getGlobalProvider().login?.();
+        }
+        else
+            navigator(href)
     }
 
   return <div className='sidebar-link' onClick={handleClick}>

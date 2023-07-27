@@ -2,20 +2,25 @@ import { FC } from 'react'
 import SignIn from './SignIn'
 import NewChatButton from './NewChatButton'
 import SidebarLink from './SidebarLink'
-import HomeIcon from '@mui/icons-material/Home';
 import SendIcon from '@mui/icons-material/Send';
 import AllInboxIcon from '@mui/icons-material/AllInbox';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import Logo from '../assets/logo.svg'
+import '../styles/Sidebar.css'
+import { useNavigate } from 'react-router-dom';
 
 interface SidebarProps {
   
 }
 
 const Sidebar: FC<SidebarProps> = ({}) => {
+  const navigator = useNavigate()
+  const handleLogoClick = () => {
+    navigator('/')
+  }
   return <div className='sidebar'>
     <div className='sidebar-header'>
-        <img src={Logo} alt='logo' />
+        <img style={{cursor:"pointer"}}src={Logo} alt='logo' onClick={handleLogoClick} />
       </div>
     <div className='sidebar-content'>
       
