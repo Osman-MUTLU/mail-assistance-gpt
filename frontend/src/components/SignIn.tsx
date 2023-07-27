@@ -1,6 +1,5 @@
 import { Login, MgtLogin } from '@microsoft/mgt-react';
 import React from 'react'
-import { SimpleLogin } from './SimpleLogin';
 
 
 function SignIn() {
@@ -19,7 +18,7 @@ function SignIn() {
         }
       } 
     >
-      <Login/>
+      <Login className='login'/>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 .App{
   display: flex;
-
+  font-family: 'Museo Sans Rounded', sans-serif;   
+  background-color:  #cacdd7;               
 }
 .content{
   margin-left: 300px;
@@ -9,15 +10,28 @@
   position: fixed;
   height: 100vh;
   width: 300px;
-  background-color: #f5f5f5;
-  border-right: 1px solid lightgray;
+  background-color: #53596c;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.60);
+}
+.sidebar-header{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.sidebar-header img{
+  width: 100%;
 }
 .sidebar-content{
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  height: 90vh;
+  height: 80vh;
   padding: 10px;
+}
+.sidebar-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .new-chat-button{
@@ -25,34 +39,37 @@
   justify-content: center;
   align-items: center;
   height: 50px;
-  background-color: #f5f5f5;
-  border: 1px solid lightgray;
+  background-color: rgb(232, 25, 50);
+  color:#FFF;
+  font-weight: 500;
+  font-size: large;
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
-
 }
 
 .new-chat-button:hover{
-  background-color: #e5e5e5;
+  box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.50);
 }
 
 .sidebar-link{
   display: flex;
   align-items: center;
   height: 50px;
-  background-color: #f5f5f5;
+  color: #FFF;
   border-bottom: 1px solid lightgray;
   cursor: pointer;
   padding-left: 10px;
   text-decoration: none;
-  color: black;
   font-size: large;
   font-weight: 500;
 }
 
 .sidebar-link:hover{
-  background-color: #e5e5e5;
+  transition: 0.3s ease-in-out;
+  color: rgb(232, 25, 50);
+  border-bottom: 1px solid  rgb(232, 25, 50);
+
 }
 
 .sidebar-link-content{
@@ -61,4 +78,30 @@
   gap: 10px;
   justify-content: space-between;
   margin-left: 10px;
+}
+
+.login {
+  --login-signed-out-button-background: #aaaebb; 
+  --login-signed-out-button-hover-background: #aaaebb; 
+  --login-signed-out-button-text-color: black;
+  --login-signed-in-background: #aaaebb;  
+  --login-signed-in-hover-background: #cacdd7; 
+  --login-button-padding: 5px;
+  --login-popup-background-color: #cacdd7; 
+  --login-popup-text-color: brown;
+  --login-popup-command-button-background-color: orange;
+  --login-popup-padding: 8px;
+  --login-add-account-button-text-color: red;
+  --login-add-account-button-background-color:  #cacdd7; 
+  --login-add-account-button-hover-background-color: #cacdd7; 
+  
+  --login-command-button-background-color: #cacdd7; 
+  --login-command-button-hover-background-color: #cacdd7;  
+  --login-command-button-text-color: red;
+
+  /** person component tokens **/
+  --person-hover-background-color: #cacdd7; 
+  --person-line1-text-color: black;
+  --person-line2-text-color: black;
+  --person-background-color:  #cacdd7; 
 }

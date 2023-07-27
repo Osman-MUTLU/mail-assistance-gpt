@@ -11,7 +11,7 @@ const NewChatButton: FC<NewChatButtonProps> = ({}) => {
     navigate('/chat')
   }
   return <div className='new-chat-button' onClick={handleClick}>
-    <h3>New Chat</h3>
+      New Chat
     </div>
 }
 

@@ -6,6 +6,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import SendIcon from '@mui/icons-material/Send';
 import AllInboxIcon from '@mui/icons-material/AllInbox';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import Logo from '../assets/logo.svg'
 
 interface SidebarProps {
   
@@ -13,7 +14,11 @@ interface SidebarProps {
 
 const Sidebar: FC<SidebarProps> = ({}) => {
   return <div className='sidebar'>
+    <div className='sidebar-header'>
+        <img src={Logo} alt='logo' />
+      </div>
     <div className='sidebar-content'>
+      
       <NewChatButton />
       <SidebarLink label='Send Email' href='/sendMail' icon={<SendIcon fontSize='medium'/>} />
       <SidebarLink label='Inbox' href='/inbox' icon={<AllInboxIcon fontSize='medium'/>} />
