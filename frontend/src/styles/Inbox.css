@@ -1,0 +1,72 @@
+.inbox{
+    display: flex;
+    height: 100vh;
+    background-color: #fff;
+}
+.message-list{
+    width: 400px;
+    height: 100vh;
+    background-color: #fff;
+    overflow: auto;
+}
+.message-list::-webkit-scrollbar{
+    width: 0px;
+}
+.message-list-header{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.message-list-header-title{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.message-list-item{
+    margin: 10px;
+    border-bottom: 1px solid rgba(145, 144, 144, 0.536);
+}
+.message-list-item-sender-group{
+    display:flex;
+    gap: 5px;
+}
+.message-list-item-sender-avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+}
+.message-list-item-sender{
+    align-items: center;
+    width: 100%;
+}
+.message-list-item-sender-name{
+    font-size: 17px;
+    font-weight: 500;
+}
+.message-list-item-bodyPreview{
+    font-size: 15px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+.inbox-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-left : 1px solid rgba(145, 144, 144, 0.536);
+
+}

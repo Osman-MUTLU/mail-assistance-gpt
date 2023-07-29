@@ -8,26 +8,6 @@ function Chat() {
       "question": "What is the capital of France?",
       "answer": "Paris"
     },
-    {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    },
-    {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    },
-    {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    },
-    {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    },
-    {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    },
   ]
 
   return (
@@ -35,7 +15,7 @@ function Chat() {
       <div className="chat">
         <div className="chat-header">
           <div className="chat-header-title">
-            <h1>MailGBT</h1>
+            <h1>Mail Assitance</h1>
           </div>
         </div>
         <div className="chat-body">

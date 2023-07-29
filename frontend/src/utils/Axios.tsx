@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { getBearerToken } from './Session';
-import { Massage } from './Types';
+import { SendMailRequest } from './Types';
 
 
 const graphURL = 'https://graph.microsoft.com/v1.0';
@@ -27,7 +27,7 @@ export const getInbox = async (top = 20) => {
     return axios.get(`${graphURL}/me/mailFolders/inbox/messages?$top=${top}`, config);
 }
 
-export const sendMail = async (message : Massage) => {
+export const sendMail = async (message : SendMailRequest) => {
     const config = await getConfigForGraph();
     return axios.post(`${graphURL}/me/sendMail`, message, config);
 }
