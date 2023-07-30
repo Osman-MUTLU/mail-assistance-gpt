@@ -1,5 +1,6 @@
 export type User = {
     displayName?: string;
+    id?: string;
 }
 
 export type Message = {
@@ -46,3 +47,10 @@ export type SendMailRequest = {
     },
     saveToSentItems: string;
 };
+
+export type PromptRequest = {
+    user_id?: string;
+    token?: string | null;
+    question?: string;
+    expire_time?: Date;
+}

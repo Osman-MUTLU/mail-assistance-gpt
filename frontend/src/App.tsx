@@ -17,7 +17,6 @@ function App() {
   const [isSignedIn] = useIsSignedIn();
 
 
-
   return (
     <div className="App">
       <BrowserRouter>

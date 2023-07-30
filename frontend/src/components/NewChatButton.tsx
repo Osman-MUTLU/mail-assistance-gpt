@@ -13,8 +13,9 @@ const NewChatButton: FC<NewChatButtonProps> = ({ }) => {
     if (!isSignedIn) {
       getGlobalProvider().login?.();
     }
-    else
+    else{
       navigator('/chat')
+    }
   }
   return <div className='new-chat-button' onClick={handleClick}>
     New Chat

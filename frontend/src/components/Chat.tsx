@@ -3,13 +3,13 @@ import '../styles/Chat.css'
 import PromptInput from './PromptInput'
 
 function Chat() {
-  const conversation = [
-    {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    },
-  ]
+  const [conversation, setConversation] = React.useState<any[]>([])
 
+  React.useEffect(() => {
+    const conversation = JSON.parse(sessionStorage.getItem("conversation") || "[]");
+    setConversation(conversation);
+  }, [])
+  
   return (
     <div className="container">
       <div className="chat">
@@ -32,7 +32,7 @@ function Chat() {
           )}
         </div>
         <div className="chat-footer">
-            <PromptInput />
+            <PromptInput setConverization = {setConversation} />
         </div>
       </div>
     </div>
