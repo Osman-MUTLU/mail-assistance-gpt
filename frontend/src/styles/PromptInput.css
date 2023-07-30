@@ -35,23 +35,6 @@
     border-radius: 50%;
     background-color: #aaaebb;
 }
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg); /* Saatin ters yönüne göre revize edilmiş değer */
-    }
-}
-
-@-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(-360deg); /* Saatin ters yönüne göre revize edilmiş değer */
-    }
-}
 
 .loading{
     -webkit-animation:spin 4s linear infinite;

@@ -3,7 +3,7 @@ import '../styles/PromptInput.css'
 import SendIcon from '@mui/icons-material/Send';
 import { sendPrompt } from '../utils/Axios';
 import { FC } from 'react';
-import CachedIcon from '@mui/icons-material/Cached';
+import RotateRightIcon from '@mui/icons-material/RotateRight';
 
 
 interface PromptInputProps {
@@ -36,7 +36,7 @@ const PromptInput: FC<PromptInputProps> = ({setConverization}) => {
                 <SendIcon/>
             </div>:
             <div className='prompt-input-attachment-loading'>
-                <CachedIcon className='loading'/>
+                <RotateRightIcon fontSize='medium' className='loading'/>
             </div>
 
         }
