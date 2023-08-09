@@ -30,9 +30,7 @@ function Home() {
                     <div className='home-content'>
                         <div className='home-header'>
                             <h1>Welcome, {user?.displayName}</h1>
-                        </div>
-                        <div className='home-body'>
-                            <h2>Here are your emails</h2>
+                            <h3>This is MailGPT Project!</h3>
                         </div>
                     </div>
                 ) : (

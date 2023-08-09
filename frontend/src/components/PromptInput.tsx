@@ -27,7 +27,6 @@ const PromptInput: FC<PromptInputProps> = ({setConverization}) => {
             setLoading(false);
         })
     }
-
     return <div className='prompt-input'>
         <textarea className='prompt-input-textarea' placeholder='Type your prompt here...' value={prompt} onChange={e => setPrompt(e.target.value)}></textarea>
         {

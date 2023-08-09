@@ -40,19 +40,16 @@ function SendMail() {
       <form onSubmit={handleSend} >
         <div className='mail-form-body'>
           <div className='mail-form-body-field'>
-
-            <input type='email' placeholder='To' className='mail-form-body-field-input' value={to} onChange={(e) => setTo(e.target.value)} />
-
+            <input type='email' placeholder='To' className='mail-form-body-field-input' 
+                    value={to} onChange={(e) => setTo(e.target.value)} />
           </div>
           <div className='mail-form-body-field'>
-
-            <input type='text' className='mail-form-body-field-input' placeholder='Subject' value={subject} onChange={(e) => setSubject(e.target.value)} />
-
+            <input type='text' className='mail-form-body-field-input' placeholder='Subject' 
+                    value={subject} onChange={(e) => setSubject(e.target.value)} />
           </div>
           <div className='mail-form-body-field'>
-
-            <textarea className='mail-form-body-field-input' placeholder='Message' value={message} onChange={(e) => setMessage(e.target.value)} />
-
+            <textarea className='mail-form-body-field-input' placeholder='Message' 
+                    value={message} onChange={(e) => setMessage(e.target.value)} />
           </div>
           <div className='mail-form-footer'>
             <button type='submit' className='mail-form-body-field-button'>
@@ -66,3 +63,5 @@ function SendMail() {
 }
 
 export default SendMail
+
+

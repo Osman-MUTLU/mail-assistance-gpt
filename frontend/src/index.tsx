@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { LoginType, Providers } from '@microsoft/mgt-element';
 import { Msal2Provider } from '@microsoft/mgt-msal2-provider';
-import { METHODS } from 'http';
 
 Providers.globalProvider = new Msal2Provider({
   clientId: '83c01961-76c5-45e7-9fd0-9f4e7781522b', 
@@ -14,13 +13,12 @@ Providers.globalProvider = new Msal2Provider({
   loginType: LoginType.Redirect,
 });
 
-
-
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+
 reportWebVitals();
