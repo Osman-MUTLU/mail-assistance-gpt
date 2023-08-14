@@ -3,39 +3,19 @@ import '../styles/Chat.css'
 import PromptInput from './PromptInput'
 
 function Chat() {
-  const conversation = [
-    {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    },
-    {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    },
-    {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    },
-    {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    },
-    {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    },
-    {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
-    },
-  ]
+  const [conversation, setConversation] = React.useState<any[]>([])
 
+  React.useEffect(() => {
+    const conversation = JSON.parse(sessionStorage.getItem("conversation") || "[]");
+    setConversation(conversation);
+  }, [])
+  
   return (
     <div className="container">
       <div className="chat">
         <div className="chat-header">
           <div className="chat-header-title">
-            <h1>MailGBT</h1>
+            <h1>Mail Assitance</h1>
           </div>
         </div>
         <div className="chat-body">
@@ -52,7 +32,7 @@ function Chat() {
           )}
         </div>
         <div className="chat-footer">
-            <PromptInput />
+            <PromptInput setConverization = {setConversation} />
         </div>
       </div>
     </div>

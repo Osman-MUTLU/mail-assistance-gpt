@@ -1,0 +1,83 @@
+.mail{
+    background: #fff;
+    width: 90%;
+    height: 100%;
+}
+.mail-header{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mail-header-sender{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.mail-header-sender-group{
+    display:flex;
+    align-items: center;
+    gap: 5px;
+}
+.mail-header-sender-name{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.mail-header-sender-avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+}
+.mail-header-sender-email{
+    font-size: 15px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+.mail-header-sender-date{
+    font-size: 15px;
+    font-weight: 200;
+}
+.mail-header-separator{
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mail-header-title{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    margin-top:10px;
+}
+
+.mail-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+.mail-body iframe{
+    height: 70vh;
+    overflow: auto;
+    width: 100%;
+    border: none;
+}

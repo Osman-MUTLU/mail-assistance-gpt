@@ -9,11 +9,7 @@ import Logo from '../assets/logo.svg'
 import '../styles/Sidebar.css'
 import { useNavigate } from 'react-router-dom';
 
-interface SidebarProps {
-  
-}
-
-const Sidebar: FC<SidebarProps> = ({}) => {
+const Sidebar = () => {
   const navigator = useNavigate()
   const handleLogoClick = () => {
     navigator('/')

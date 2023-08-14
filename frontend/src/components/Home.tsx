@@ -12,6 +12,7 @@ function Home() {
 
     React.useEffect(() => {
         getMe().then((response) => {
+            console.log(response.data)
             setUser(response.data);
         })
         .catch((error) => {
@@ -28,10 +29,8 @@ function Home() {
                 isSignedIn ? (
                     <div className='home-content'>
                         <div className='home-header'>
-                            <h1>Welcome, {user.displayName}</h1>
-                        </div>
-                        <div className='home-body'>
-                            <h2>Here are your emails</h2>
+                            <h1>Welcome, {user?.displayName}</h1>
+                            <h3>This is MailGPT Project!</h3>
                         </div>
                     </div>
                 ) : (
