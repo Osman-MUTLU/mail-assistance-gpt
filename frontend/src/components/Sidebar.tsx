@@ -5,7 +5,6 @@ import SidebarLink from './SidebarLink'
 import SendIcon from '@mui/icons-material/Send';
 import AllInboxIcon from '@mui/icons-material/AllInbox';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import Logo from '../assets/logo.svg'
 import '../styles/Sidebar.css'
 import { useNavigate } from 'react-router-dom';
 
@@ -16,7 +15,7 @@ const Sidebar = () => {
   }
   return <div className='sidebar'>
     <div className='sidebar-header'>
-        <img style={{cursor:"pointer"}}src={Logo} alt='logo' onClick={handleLogoClick} />
+        {/*<img style={{cursor:"pointer"}}src={Logo} alt='logo' onClick={handleLogoClick} />*/}
       </div>
     <div className='sidebar-content'>
       
